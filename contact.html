@@ -3,30 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Contact - SalFlowers
-    </title>
+    <title>Contact - SalFlowers</title>
     <link rel="stylesheet" href="/public/css/semantic.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .nim {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 14px;
-            color: #333;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 5px 10px;
-            border-radius: 5px;
-            z-index: 1000;
-        }
-        .contact-section {
-            padding: 50px 0;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        .contact-section h3 {
-            font-family: 'Times New Roman', Times, serif;
-        }
         .header-container {
             display: flex;
             justify-content: space-between;
@@ -42,6 +23,7 @@
             font-size: 24px;
             font-family: 'Times New Roman', Times, serif;
             color: white;
+            text-decoration: none;
         }
         
         .nav-menu {
@@ -55,59 +37,135 @@
             font-size: 16px;
             transition: all 0.3s ease;
         }
-        
+
         .nav-menu a:hover {
             color: #CB2A5A; 
             transform: translateY(-2px);
         }
+
+        .contact-section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            color: #E27396;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .ui.segment {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: none;
+            padding: 30px;
+        }
+        
+        .ui.form .field {
+            margin-bottom: 20px;
+        }
+        
+        .ui.form .field label {
+            font-weight: 500;
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .ui.form input,
+        .ui.form textarea {
+            padding: 12px 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+        
+        .ui.form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .ui.primary.button {
+            background-color: #E27396 ;
+            padding: 12px 25px ;
+            font-size: 16px ;
+            transition: all 0.3s ease;
+        }
+    
+        .ui.primary.button:hover {
+            background-color: #CB2A5A;
+            transform: translateY(-2px);
+        }
+        .nim {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .contact-section {
+                padding: 30px 15px;
+        }
+            
+        .ui.stackable.grid {
+                margin-top: 0;
+        }
     </style>
 </head>
 <body>
-   <header class="header-container">
-        <a href = "index.html" class="logo">Halo Florifilis!</div>
+    <header class="header-container">
+        <a href="index.html" class="logo">Halo Florifilis!</a>
         <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <div class="ui container contact-section">
+    <div class="contact-section">
         <h2 class="ui header section-title animate__animated animate__fadeInDown">Hubungi Kami</h2>
         <div class="ui stackable grid">
             <div class="eight wide column animate__animated animate__fadeIn">
                 <div class="ui segment">
-                    <h3 class="ui header">Alamat</h3>
-                    <p>Jl. Bunga Indah No. 123, Kota Bunga, Indonesia</p>
+                    <h3 class="ui header"><i class="fas fa-map-marker-alt"></i> Alamat</h3>
+                    <p><i class="fas fa-location-dot"></i> Jl. Bunga Indah No. 123, Kota Bunga, Indonesia</p>
                 </div>
             </div>
             <div class="eight wide column animate__animated animate__fadeIn">
                 <div class="ui segment">
-                    <h3 class="ui header">Kontak</h3>
-                    <p>Email: salflowers@gmail.com</p>
-                    <p>Telepon: +621234567890</p>
+                    <h3 class="ui header"><i class="fas fa-address-book"></i> Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> Email: salflowers@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> Telepon: +621234567890</p>
                 </div>
             </div>
         </div>
-        <div class="ui segment animate__animated animate__fadeIn">
-            <h3 class="ui header">Kirim Pesan</h3>
+        <div class="ui segment animate__animated animate__fadeIn" style="margin-top: 30px;">
+            <h3 class="ui header"><i class="fas fa-paper-plane"></i> Kirim Pesan</h3>
             <form class="ui form">
                 <div class="field">
-                    <label>Nama:</label>
-                    <input type="text" name="name" placeholder="Nama" required>
+                    <label>Nama Lengkap</label>
+                    <input type="text" name="name" placeholder="Masukkan nama Anda" required>
                 </div>
                 <div class="field">
-                    <label>Email:</label>
-                    <input type="email" name="email" placeholder="Email" required>
+                    <label>Alamat Email</label>
+                    <input type="email" name="email" placeholder="Masukkan email Anda" required>
                 </div>
                 <div class="field">
-                    <label>Pesan:</label>
-                    <textarea name="message" placeholder="Pesan" required></textarea>
+                    <label>Pesan Anda</label>
+                    <textarea name="message" placeholder="Tulis pesan Anda di sini..." required></textarea>
                 </div>
-                <button class="ui primary button" type="submit">Kirim</button>
+                <button class="ui primary button" type="submit">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
             </form>
         </div>
     </div>
-    <div class="nim animate__animated animate__fadeIn">Nama: Salwa Laelani NIM: 243307027</div>
+    <div class="nim animate__animated animate__fadeIn">
+        <i class="fas fa-user"></i> Salwa Laelani | NIM: 243307027
+    </div>
     <script src="/public/js/semantic.min.js"></script>
 </body>
 </html>
