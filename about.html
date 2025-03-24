@@ -6,6 +6,7 @@
     <title>About - SalFlowers</title>
     <link rel="stylesheet" href="/public/css/semantic.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
         .header-container {
             display: flex;
@@ -17,26 +18,22 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             font-family: 'Arial', sans-serif;
         }
-        
         .logo {
             font-size: 24px;
             font-family: 'Times New Roman', Times, serif;
             color: white;
             text-decoration: none;
         }
-        
         .nav-menu {
             display: flex;
             gap: 25px;
         }
-        
         .nav-menu a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             transition: all 0.3s ease;
         }
-        
         .nav-menu a:hover {
             color: #CB2A5A;
             transform: translateY(-2px);
@@ -58,7 +55,6 @@
             line-height: 1.6;
             margin-bottom: 50px;
         }
-        
         .vision-mission {
             display: flex;
             gap: 30px;
@@ -75,15 +71,12 @@
         .vision-card:hover, .mission-card:hover {
             transform: translateY(-10px);
         }
-        
         .vision-card {
             border-top: 5px solid #4CAF50;
         }
-        
         .mission-card {
             border-top: 5px solid #2196F3;
         }
-        
         .vision-card h3, .mission-card h3 {
             color: #333;
             margin-bottom: 20px;
@@ -91,33 +84,25 @@
             align-items: center;
             gap: 10px;
         }
-        
         .team-section {
             margin-top: 50px;
         }
-        
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
-        
         .team-member {
             text-align: center;
             padding: 20px;
             border-radius: 10px;
             background: white;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid #E27396;
+            transition: transform 0.3s ease;
+        } 
+        .team-member:hover {
+            transform: scale(1.05);
         }
         .nim {
             position: fixed;
@@ -130,13 +115,10 @@
             border-radius: 5px;
             z-index: 1000;
         }
-        .vision-mission {
-                flex-direction: column;
-        }
     </style>
 </head>
 <body>
-    <header class="header-container">
+    <header class="header-container animate__animated animate__fadeInDown">
         <a href="index.html" class="logo">Halo Florifilis!</a>
         <nav class="nav-menu">
             <a href="index.html">Home</a>
@@ -145,48 +127,45 @@
         </nav>
     </header>
     <div class="about-section">
-        <h1 class="section-title">Tentang Kami</h1> 
-        <p class="about-description">
+        <h1 class="section-title animate__animated animate__fadeInDown animate__delay-1s">Tentang Kami</h1>
+        <p class="about-description animate__animated animate__fadeIn animate__delay-1-5s">
             SalFlowers adalah toko bunga yang menyediakan berbagai jenis bunga segar dan buket indah untuk berbagai acara. 
             Kami berkomitmen untuk memberikan produk berkualitas tinggi dengan pelayanan terbaik.
         </p>
         <div class="vision-mission">
-            <div class="vision-card">
+            <div class="vision-card animate__animated animate__fadeInLeft animate__delay-2s">
                 <h3><i class="fas fa-eye" style="color: #4CAF50;"></i> Visi</h3>
                 <p>Menjadi toko bunga terbaik yang memberikan kebahagiaan melalui keindahan bunga.</p>
                 <p>Menginspirasi masyarakat untuk menghargai keindahan alam melalui karya floral.</p>
                 <p>Menjadi pelopor tren dekorasi bunga di Indonesia.</p>
             </div>
-            <div class="mission-card">
+            
+            <div class="mission-card animate__animated animate__fadeInRight animate__delay-2s">
                 <h3><i class="fas fa-bullseye" style="color: #2196F3;"></i> Misi</h3>
                 <p>Menyediakan bunga segar dan berkualitas dengan pelayanan ramah dan profesional.</p>
                 <p>Memberikan edukasi tentang perawatan bunga yang tepat kepada pelanggan.</p>
                 <p>Mengembangkan produk kreatif yang mengikuti perkembangan zaman.</p>
             </div>
         </div>
-        <div class="team-section">
+        <div class="team-section animate__animated animate__fadeIn animate__delay-3s">
             <h2 class="ui header" style="text-align: center; color: #E27396;">Tim Kami</h2>
             <div class="team-grid">
-                <div class="team-member">
+                <div class="team-member animate__animated animate__zoomIn animate__delay-3s">
                     <h3>Salwa Laelani</h3>
                     <p>Owner & Florist</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member animate__animated animate__zoomIn animate__delay-3-5s">
                     <h3>Salsabila Dewanti</h3>
                     <p>Admin</p>
                 </div>
-                <div class="team-member">
+                <div class="team-member animate__animated animate__zoomIn animate__delay-4s">
                     <h3>Maudatul Mufida</h3>
                     <p>Marketing</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="nim">
-        <i class="fas fa-user"></i> Salwa Laelani | NIM: 243307027
-    </div>
-
+    <div class="nim animate__animated animate__fadeIn">Nama: Salwa Laelani NIM: 243307027</div>
     <script src="/public/js/semantic.min.js"></script>
 </body>
 </html>
