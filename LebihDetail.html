@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Produk - SalFlowers</title>
-    <!-- Semantic UI CSS (Local) -->
     <link rel="stylesheet" href="/public/css/semantic.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
         .nim {
             position: fixed;
@@ -38,6 +38,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             font-family: 'Arial', sans-serif;
         }
+        
         .logo {
             font-size: 24px;
             font-family: 'Times New Roman', Times, serif;
@@ -69,51 +70,49 @@
         </nav>
     </header>
     <div class="ui container product-detail">
-        <h2 class="ui header" id="productName">Nama Produk</h2>
-        <img id="productImage" src="" alt="Produk">
-        <p id="productDescription">Deskripsi produk.</p>
-        <p><strong>Harga:</strong> <span id="productPrice"></span></p>
-        <p><strong>Stok:</strong> <span id="productStock"></span></p>
-        <button class="ui primary button" onclick="orderProduct()">Pesan Sekarang</button>
+        <h2 class="ui header animate__animated animate__fadeIn animate__delay-1s" id="productName">Nama Produk</h2>
+        <img id="productImage" src="" alt="Produk" class="animate__animated animate__zoomIn animate__delay-1-5s">
+        <p id="productDescription" class="animate__animated animate__fadeIn animate__delay-2s">Deskripsi produk.</p>
+        <p class="animate__animated animate__fadeIn animate__delay-2-5s"><strong>Harga:</strong> <span id="productPrice"></span></p>
+        <p class="animate__animated animate__fadeIn animate__delay-3s"><strong>Stok:</strong> <span id="productStock"></span></p>
+        <button class="ui primary button animate__animated animate__pulse animate__delay-3-5s" onclick="orderProduct()">Pesan Sekarang</button>
     </div>
 
-    <!-- NIM -->
-    <div class="nim">Nama: Salwa Laelani NIM: 243307027</div>
-
+    <div class="nim animate__animated animate__fadeIn animate__delay-4s">Nama: Salwa Laelani NIM: 243307027</div>
     <script src="/public/js/semantic.min.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const productKey = urlParams.get('produk');
         const products = {
-           "Mawar": {
+            Mawar: {
                 name: "Bunga Mawar Merah",
                 description: "Simbol cinta dan kasih sayang.",
                 price: "Rp 50.000 per tangkai",
                 stock: "10 tangkai",
-                image: "mawar.jpeg"
+                image: "Mawar.jpeg"
             },
-            "Tulip": {
+            Tulip: {
                 name: "Bunga Tulip",
                 description: "Tulip warna-warni yang cerah.",
                 price: "Rp 40.000 per tangkai",
                 stock: "15 tangkai",
-                image: "tulip.jpeg"
+                image: "Tulip.jpeg"
             },
-            "Matahari": {
+            Matahari: {
                 name: "Bunga Matahari",
                 description: "Bunga yang cerah dan energik.",
                 price: "Rp 35.000 per tangkai",
                 stock: "20 tangkai",
                 image: "matahari.jpeg"
             },
-            "Buket Biasa": {
+            Buket Biasa: {
                 name: "Buket Biasa",
                 description: "Buket yang dibungkus dengan kertas wrap.",
                 price: "Rp 100.000",
                 stock: "5 buah",
-                image: "buket biasa.jpeg"
+                image: "image/buket biasa.jpeg"
             },
-            "Hand Tied": {
+            Hand Tied: {
                 name: "Buket Hand Tied",
                 description: "Buket dengan bunga yang diikat bersama dengan pita.",
                 price: "Rp 300.000",
