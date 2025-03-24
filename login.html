@@ -6,6 +6,107 @@
     <title>Login - SalFlowers</title>
     <link rel="stylesheet" href="/public/css/semantic.min.css">
     <style>
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #E27396;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-menu a:hover {
+            color: #CB2A5A;
+            transform: translateY(-2px);
+        }
+        .login-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+            background-color: #fff9fb;
+            padding: 40px 20px;
+        }
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.1);
+            text-align: center;
+        }
+        .login-title {
+            color: #E27396;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .ui.form .field {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .ui.form label {
+            font-weight: 500;
+            color: #555;
+        }
+        .ui.form input {
+            padding: 14px 16px;
+            border-radius: 8px ;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        
+        .login-button {
+            background-color: #E27396;
+            color: white;
+            padding: 14px 0;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .login-button:hover {
+            background-color: #CB2A5A;
+            transform: translateY(-2px);
+        }
+        
+        .register-link {
+            margin-top: 20px;
+            color: #666;
+        }
+        
+        .register-link a {
+            color: #E27396;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        .register-link a:hover {
+            text-decoration: underline;
+        }
         .nim {
             position: fixed;
             bottom: 10px;
@@ -17,54 +118,11 @@
             border-radius: 5px;
             z-index: 1000;
         }
-        .login-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .login-box {
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            background-color: #f4acb7;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: #E27396;
-            color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            font-family: 'Arial', sans-serif;
-        }
-        .logo {
-            font-size: 24px;
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 25px;
-        }
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-        .nav-menu a:hover {
-            color: #CB2A5A; 
-            transform: translateY(-2px);
-        }
     </style>
 </head>
 <body>
-     <header class="header-container">
-        <a href = "index.html" class="logo">Halo Florifilis!</div>
+    <header class="header-container">
+        <a href="index.html" class="logo">Halo Florifilis!</a>
         <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -73,23 +131,26 @@
     </header>
     <div class="login-section">
         <div class="login-box">
-            <h2 class="ui header">Login</h2>
+            <h2 class="login-title"><i class="fas fa-user-circle"></i> Login</h2>
             <form class="ui form">
                 <div class="field">
                     <label>Username</label>
-                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="text" name="username" placeholder="Masukkan username Anda" required>
                 </div>
                 <div class="field">
                     <label>Password</label>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Masukkan password Anda" required>
                 </div>
-                <button class="ui primary button" type="submit">Login</button>
+                <button class="ui primary button login-button" type="submit">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <div class="register-link">
+                    Belum punya akun? <a href="register.html">Daftar di sini</a>
+                </div>
             </form>
-            <p class="text-center mt-3">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
         </div>
     </div>
-
-    <div class="nim">Nama: Salwa Laelani NIM: 243307027</div>
+    <div class="nim animate__animated animate__fadeIn">Nama: Salwa Laelani NIM: 243307027</div>
     <script src="/public/js/semantic.min.js"></script>
 </body>
 </html>
