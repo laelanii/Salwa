@@ -21,19 +21,47 @@
         .about-section {
             padding: 50px 0;
         }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #E27396;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu a:hover {
+            color: #CB2A5A; 
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
-    <div class="ui inverted menu">
-        <a href="index.html" class="header item">Halo Florifilis!</a>
-        <div class="right menu">
-            <a href="index.html" class="item">Home</a>
-            <a href="about.html" class="item">About</a>
-            <a href="contact.html" class="item">Contact</a>
-        </div>
-    </div>
-
-    <!-- About Section -->
+    <header class="header-container">
+        <a href = "index.html" class="logo">Halo Florifilis!</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
     <div class="ui container about-section">
         <h2 class="ui header section-title animate__animated animate__fadeInDown">Tentang Kami</h2>
         <p class="animate__animated animate__fadeIn">
