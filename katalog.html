@@ -18,34 +18,52 @@
             border-radius: 5px;
             z-index: 1000;
         }
-        .grid-item {
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-item {
+            display: flex;
             background-color: #E27396;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease;
-            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            height: 200px;
         }
-        .grid-item:hover {
-            transform: scale(1.05);
+        .product-item:hover {
+            transform: translateY(-5px);
         }
-        .grid-item img {
-            width: 100%;
+        .product-image {
+            width: 200px;
             height: 200px;
             object-fit: cover;
+            flex-shrink: 0;
         }
-        .grid-item .content {
+        .product-content {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
         }
-        .grid-item h3 {
+        .product-content h3 {
             font-size: 18px;
             margin: 0 0 8px;
             color: #E6EAEE;
         }
-        .grid-item p {
+        .product-content p {
             font-size: 14px;
             color: #fff;
             margin: 0;
+        }
+        .section-title {
+            text-align: center;
+            margin: 30px 0;
         }
     </style>
 </head>
@@ -61,72 +79,79 @@
 
     <div class="ui container">
         <h2 class="ui header section-title animate__animated animate__fadeInDown">Katalog Bunga</h2>
-        <div class="ui three column stackable grid">
-            <div class="column">
-                <div class="grid-item">
-                    <img src="mawar.jpeg" alt="Bunga Mawar">
-                    <div class="content">
+        <div class="product-container">
+            <!-- Bunga Mawar -->
+            <div class="product-item animate__animated animate__fadeIn">
+                <img src="mawar.jpeg" alt="Bunga Mawar" class="product-image">
+                <div class="product-content">
+                    <div>
                         <h3>Bunga Mawar Merah</h3>
                         <p>Simbol cinta dan kasih sayang.</p>
-                        <a href="LebihDetail.html?produk=Mawar" class="ui button">Lihat Detail</a>
                     </div>
+                    <a href="LebihDetail.html?produk=Mawar" class="ui button">Lihat Detail</a>
                 </div>
             </div>
-            <div class="column">
-                <div class="grid-item">
-                    <img src="tulip.jpeg" alt="Bunga Tulip">
-                    <div class="content">
+            
+            <!-- Bunga Tulip -->
+            <div class="product-item animate__animated animate__fadeIn">
+                <img src="tulip.jpeg" alt="Bunga Tulip" class="product-image">
+                <div class="product-content">
+                    <div>
                         <h3>Bunga Tulip</h3>
                         <p>Tulip warna-warni yang cerah.</p>
-                        <a href="LebihDetail.html?produk=Tulip" class="ui button">Lihat Detail</a>
                     </div>
+                    <a href="LebihDetail.html?produk=Tulip" class="ui button">Lihat Detail</a>
                 </div>
             </div>
-            <div class="column">
-                <div class="grid-item">
-                    <img src="matahari.jpeg" alt="Bunga Matahari">
-                    <div class="content">
+            
+            <!-- Bunga Matahari -->
+            <div class="product-item animate__animated animate__fadeIn">
+                <img src="matahari.jpeg" alt="Bunga Matahari" class="product-image">
+                <div class="product-content">
+                    <div>
                         <h3>Bunga Matahari</h3>
                         <p>Bunga yang cerah dan energik.</p>
-                        <a href="LebihDetail.html?produk=Matahari" class="ui button">Lihat Detail</a>
                     </div>
+                    <a href="LebihDetail.html?produk=Matahari" class="ui button">Lihat Detail</a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Katalog Buket -->
-    <div class="ui container">
         <h2 class="ui header section-title animate__animated animate__fadeInDown">Katalog Buket</h2>
-        <div class="ui three column stackable grid">
-            <div class="column">
-                <div class="grid-item">
-                    <img src="buket biasa.jpeg" alt="Buket Biasa">
-                    <div class="content">
+        <div class="product-container">
+            <!-- Buket Biasa -->
+            <div class="product-item animate__animated animate__fadeIn">
+                <img src="buket biasa.jpeg" alt="Buket Biasa" class="product-image">
+                <div class="product-content">
+                    <div>
                         <h3>Buket Biasa</h3>
                         <p>Buket yang dibungkus dengan kertas wrap.</p>
-                        <a href="LebihDetail.html?produk=Buket Biasa" class="ui button">Lihat Detail</a>
                     </div>
+                    <a href="LebihDetail.html?produk=Buket Biasa" class="ui button">Lihat Detail</a>
                 </div>
             </div>
-            <div class="column">
-                <div class="grid-item">
-                    <img src="Hand Tied.jpeg" alt="Buket Hand Tied">
-                    <div class="content">
+            
+            <!-- Buket Hand Tied -->
+            <div class="product-item animate__animated animate__fadeIn">
+                <img src="Hand Tied.jpeg" alt="Buket Hand Tied" class="product-image">
+                <div class="product-content">
+                    <div>
                         <h3>Buket Hand Tied</h3>
                         <p>Buket dengan bunga yang diikat bersama dengan pita.</p>
-                        <a href="LebihDetail.html?produk=Hand Tied" class="ui button">Lihat Detail</a>
                     </div>
+                    <a href="LebihDetail.html?produk=Hand Tied" class="ui button">Lihat Detail</a>
                 </div>
             </div>
-            <div class="column">
-                <div class="grid-item">
-                    <img src="Biedermeier.jpeg" alt="Buket Biedermeier">
-                    <div class="content">
+            
+            <!-- Buket Biedermeier -->
+            <div class="product-item animate__animated animate__fadeIn">
+                <img src="Biedermeier.jpeg" alt="Buket Biedermeier" class="product-image">
+                <div class="product-content">
+                    <div>
                         <h3>Buket Biedermeier</h3>
                         <p>Buket dengan lapisan bunga yang disusun secara simetris.</p>
-                        <a href="LebihDetail.html?produk=Biedermeier" class="ui button">Lihat Detail</a>
                     </div>
+                    <a href="LebihDetail.html?produk=Biedermeier" class="ui button">Lihat Detail</a>
                 </div>
             </div>
         </div>
