@@ -28,20 +28,46 @@
             height: auto;
             border-radius: 8px;
         }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #E27396;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-family: 'Arial', sans-serif;
+        }
+        .logo {
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu a:hover {
+            color: #CB2A5A; 
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="ui inverted menu">
-        <a href="index.html" class="header item">Halo Florifilis!</a>
-        <div class="right menu">
-            <a href="index.html" class="item">Home</a>
-            <a href="about.html" class="item">About</a>
-            <a href="contact.html" class="item">Contact</a>
-        </div>
-    </div>
-
-    <!-- Product Detail Section -->
+    <header class="header-container">
+        <a href = "index.html" class="logo">Halo Florifilis!</div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
     <div class="ui container product-detail">
         <h2 class="ui header" id="productName">Nama Produk</h2>
         <img id="productImage" src="" alt="Produk">
@@ -54,7 +80,6 @@
     <!-- NIM -->
     <div class="nim">Nama: Salwa Laelani NIM: 243307027</div>
 
-    <!-- Semantic UI JS (Local) -->
     <script src="/public/js/semantic.min.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
