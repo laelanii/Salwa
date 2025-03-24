@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Contact - SalFlowers
+    </title>
+    <link rel="stylesheet" href="/public/css/semantic.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        .nim {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .contact-section {
+            padding: 50px 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .contact-section h3 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="ui inverted menu">
+        <a href="index.html" class="header item">Halo Florifilis!</a>
+        <div class="right menu">
+            <a href="index.html" class="item">Home</a>
+            <a href="about.html" class="item">About</a>
+            <a href="contact.html" class="item">Contact</a>
+        </div>
+    </div>
+    <div class="ui container contact-section">
+        <h2 class="ui header section-title animate__animated animate__fadeInDown">Hubungi Kami</h2>
+        <div class="ui stackable grid">
+            <div class="eight wide column animate__animated animate__fadeIn">
+                <div class="ui segment">
+                    <h3 class="ui header">Alamat</h3>
+                    <p>Jl. Bunga Indah No. 123, Kota Bunga, Indonesia</p>
+                </div>
+            </div>
+            <div class="eight wide column animate__animated animate__fadeIn">
+                <div class="ui segment">
+                    <h3 class="ui header">Kontak</h3>
+                    <p>Email: salflowers@gmail.com</p>
+                    <p>Telepon: +621234567890</p>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment animate__animated animate__fadeIn">
+            <h3 class="ui header">Kirim Pesan</h3>
+            <form class="ui form">
+                <div class="field">
+                    <label>Nama:</label>
+                    <input type="text" name="name" placeholder="Nama" required>
+                </div>
+                <div class="field">
+                    <label>Email:</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="field">
+                    <label>Pesan:</label>
+                    <textarea name="message" placeholder="Pesan" required></textarea>
+                </div>
+                <button class="ui primary button" type="submit">Kirim</button>
+            </form>
+        </div>
+    </div>
+    <div class="nim animate__animated animate__fadeIn">Nama: Salwa Laelani NIM: 243307027</div>
+    <script src="/public/js/semantic.min.js"></script>
+</body>
+</html>
